@@ -1,0 +1,22 @@
+<head>
+  <title>Simple Search Form</title>
+</head>
+<body>
+  Welcome <%= @user %> 
+  <hr>
+  
+  <%= form_tag home_path, :method => 'get' do %>
+    <p>
+
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+  <% end %>
+
+  <% if @searching %>
+  	<h4>Results for <%= @query %></h4>
+
+  	
+  <% end %>
+
+</body>
