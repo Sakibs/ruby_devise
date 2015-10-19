@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # add devise
 gem 'devise'
+# add twitter api
+gem 'twitter'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

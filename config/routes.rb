@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'hello' => 'say#hello', as: :home
+  get 'hello' => 'say#hello', as: :welcome
 
   get 'bye' => 'say#goodbye', as: :exit
+
+  get 'home' => 'home#homepage', as: :home
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
