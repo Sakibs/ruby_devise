@@ -2,9 +2,8 @@
   <title>Simple Search Form</title>
 </head>
 <body>
-  Welcome <%= @user %> 
-  <hr>
   
+  Enter keywords separated by spaces (AAPl Stock ...)
   <%= form_tag home_path, :method => 'get' do %>
     <p>
 
@@ -14,9 +13,14 @@
   <% end %>
 
   <% if @searching %>
-  	<h4>Results for <%= @query %></h4>
+  	<h4><%= @tweets.count %> Results for <%= @query %> (retweets omitted)</h4>
 
-  	
+    <hr>
+  	<% @tweets.each do |t| %>
+		<%= t.text %>
+		<hr>
+	<% end %>
+
   <% end %>
 
 </body>

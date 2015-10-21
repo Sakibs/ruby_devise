@@ -1,9 +1,9 @@
 class SayController < ApplicationController
   def hello
-  	# @tweets = $twitter.search("ruby", :count => 10, :result_type => "recent")
+  	@tweets = $twitter.search("#google", result_type: "recent", count: 20)
   end
 
   def goodbye
-  	@time = Time.now
+  	@time = Time.now	
   end
 end
